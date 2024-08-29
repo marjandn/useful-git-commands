@@ -102,3 +102,9 @@ git push origin main --force-with-lease
 
 
 ## Tag
+Tags used for making specific point in the project's hisotry as important, mostly used to mark release points or create a reference to an important points like completion of a major feature or the delivery of a critical bug fix.
+```
+git tag <TagName> <ReferenceCommit>
+```
+### Tags are Immutable
+tags unlike branches are immutable and when you check out to them the HEAD will be detached it means you're not on any branch and you can't commit your changes so **you have to create a branch after checking out a tag** and do your changes on that branch.
