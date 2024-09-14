@@ -108,3 +108,41 @@ git tag <TagName> <ReferenceCommit>
 ```
 ### Tags are Immutable
 tags unlike branches are immutable and when you check out to them the HEAD will be detached it means you're not on any branch and you can't commit your changes so **you have to create a branch after checking out a tag** and do your changes on that branch.
+
+
+
+## Stash
+Stash command let you to temporarily save changes in your working directory that you don't want to commit them yet, you can change your branch or work on other task while you won't lose your changes.
+
+- Stash files
+```
+git stash push -m "name of stash"
+```
+
+- List of Stashes
+```
+git stash push -m "name of stash"
+```
+
+- Apply and Remove a stash
+```
+git stash pop stash@{n}
+```
+
+- Apply withou Removing
+```
+git stash apply stash@{n}
+```
+
+- Remove a Stash
+```
+git stash drop stash@{n}
+```
+
+- Show difference of Stash content with you working directory
+```
+git stash show -p stash@{n}
+```
+
+
+
