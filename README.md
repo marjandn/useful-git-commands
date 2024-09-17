@@ -106,6 +106,15 @@ Tags used for making specific point in the project's hisotry as important, mostl
 ```
 git tag <TagName> <ReferenceCommit>
 ```
+#### See all Tags
+```
+git tag
+```
+#### Push Tags
+```
+git push --tags # Will push all tags
+git push origin <tag name> # Will push a certain tag
+```
 ### Tags are Immutable
 tags unlike branches are immutable and when you check out to them the HEAD will be detached it means you're not on any branch and you can't commit your changes so **you have to create a branch after checking out a tag** and do your changes on that branch.
 
