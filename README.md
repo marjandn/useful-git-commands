@@ -118,6 +118,21 @@ git push origin <tag name> # Will push a certain tag
 ### Tags are Immutable
 tags unlike branches are immutable and when you check out to them the HEAD will be detached it means you're not on any branch and you can't commit your changes so **you have to create a branch after checking out a tag** and do your changes on that branch.
 
+#### Replace a Tag
+Assume that you have a tag named v1.1.0 with 123 commit refrence number, now you want to change the refrence number of this tag name.
+In this case you have to delete this tag (local and remote) and then create a new tag with this name
+
+1- delete the tag locally
+```
+git tag -d v1.1.0
+```
+
+2- delete the tag from remote repository
+```
+git push origin --delete v1.1.0
+```
+
+then you won't have this tag name anymore, and you can create this tag with a new refrence number !
 
 
 ## Stash
