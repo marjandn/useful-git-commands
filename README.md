@@ -57,8 +57,15 @@ git cherry-pick <hash-of-a-commit>
 
 ## Rebase / Interactive Rebase
 
-Reapply Commits on a New Base: It allows you to move or "reapply" a series of commits from one base commit to another.
-Linearize Commit History: Rebasing rewrites the commit history by creating new commits with the same changes as the original ones, but with different parent commits. This results in a linear commit history, as opposed to the sometimes complex history produced by merging branches.
+#### Rebase
+- Moves your current branch’s commits on top of another branch.
+- It rewrites history by applying commits sequentially.
+- Often used to keep a feature branch updated with the latest changes from main.
+```
+git checkout feature-branch
+git rebase main
+```
+This takes all commits from feature-branch and applies them on top of main.
 
 #### Interactive Rebase
 ```
