@@ -65,7 +65,19 @@ git cherry-pick <hash-of-a-commit>
 git checkout feature-branch
 git rebase main
 ```
-This takes all commits from feature-branch and applies them on top of main.
+- Takes all commits from feature-branch, temporarily removes them.
+- Updates feature-branch to the latest version of main.
+- Reapplies the removed commits on top of the latest main, making history cleaner and linear.
+
+```
+git rebase --continue
+```
+To complete the process after resolving conflicts.
+
+```
+git checkout main
+git merge feature-branch --ff-only  # Apply without more commit (if possible)
+```
 
 #### Interactive Rebase
 ```
